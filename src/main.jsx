@@ -7,7 +7,10 @@ import PostList, { postLoder } from './components/PostList.jsx'
 import CreatePost, { createPostAction } from './components/CreatePost.jsx'
 import App from './route/App.jsx'
 const router=createBrowserRouter([{path:"/",element:<App/>, children:[{path:"/",element:<PostList/>,loader:postLoder},
-  {path:"/create-post",element:<CreatePost/>,action:createPostAction}
+  {path:"/create-post",element:<CreatePost/>,action:createPostAction},
+  , {
+  basename: "/social-media", // 👈 Yeh line add karein
+}
 ]}])
 
 createRoot(document.getElementById('root')).render(
